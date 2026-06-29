@@ -1,0 +1,86 @@
+:root {
+    --background-blue: #9DDCFF;
+    --background-orange: #FF7F0F;
+    --background-red: #7F0002;
+    --background-purple: #4A0094;
+    --background-yellow: #FFFFA5;
+    --yellow: var(--background-yellow);
+    --blue: #050060;
+    --red: #7F0002;
+    --purple: #4A0094;
+    --pink: #FFD5D6;
+    --text: var(--blue);
+    --font-regular: 400;
+    --font-bold: 700;
+}
+
+/* Regular — 400 */
+@font-face {
+  font-family: "Plouv-ara";
+  src: url("/assets/fonts/PLOUV-ARA/Plouv-ara-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Italic — 400 */
+@font-face {
+  font-family: "Plouv-ara";
+  src: url("/assets/fonts/PLOUV-ARA/Plouv-ara-Italique.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium — 500 */
+@font-face {
+  font-family: "Plouv-ara";
+  src: url("/assets/fonts/PLOUV-ARA/Plouv-ara-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium Italic — 500 */
+@font-face {
+  font-family: "Plouv-ara";
+  src: url("/assets/fonts/PLOUV-ARA/Plouv-ara-MediumItalique.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold — 700 */
+@font-face {
+  font-family: "Plouv-ara";
+  src: url("/assets/fonts/PLOUV-ARA/Plouv-ara-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold Italic — 700 */
+@font-face {
+  font-family: "Plouv-ara";
+  src: url("/assets/fonts/PLOUV-ARA/Plouv-ara-BoldItalique.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+    background: linear-gradient(180deg, var(--background-blue) 60%,var(--background-orange) 100%);
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    font-family: "Plouv-ara", sans-serif;
+    font-weight: var(--font-regular);
+}
+
+h1 {
+    font-size: 13.5rem;
+    font-weight: var(--font-bold);
+    text-align: center;
+    font-feature-settings: 'ss01' on;
+    line-height: normal;
+}
