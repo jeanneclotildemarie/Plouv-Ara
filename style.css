@@ -1,9 +1,11 @@
 :root {
     --background-blue: #9DDCFF;
+    --background-sky: #73CEFF;
     --background-orange: #FF7F0F;
     --background-red: #7F0002;
     --background-purple: #4A0094;
     --background-yellow: #FFFFA5;
+    --background-lavender: #FFD9FC;
     --yellow: var(--background-yellow);
     --blue: #050060;
     --red: #7F0002;
@@ -13,6 +15,8 @@
     --font-regular: 400;
     --font-bold: 700;
     --text-size: 1.875rem;
+    --gradient-top: var(--background-blue);
+    --gradient-bottom: var(--background-orange);
 }
 
 /* Regular — 400 */
@@ -70,7 +74,7 @@
 }
 
 body {
-    background: linear-gradient(180deg, var(--background-blue) 60%,var(--background-orange) 100%);
+    background: linear-gradient(180deg, var(--gradient-top) 60%, var(--gradient-bottom) 100%);
     margin: 0;
     padding: 0;
     color: var(--text);
@@ -85,11 +89,13 @@ header {
     width: 100%;
     margin: 0;
     padding: 0;
-    margin-top: 4rem;
+    margin-top: 1.75rem;
+    padding-bottom: 12.8125rem;
 }
 
 header h1 {
-    margin: 4rem;
+    margin: 0;
+    margin-top: 0.5em;
 }
 
 section {
@@ -121,6 +127,10 @@ h1 {
 p {
     text-align: center;
     font-size: 1.875rem;
+    line-height: 2.125rem;
+    margin: 0;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
 }
 
 .icon {
@@ -140,6 +150,10 @@ p {
 }
 
 .introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.125rem;
     font-feature-settings: 'ss01' on;
 }
 
@@ -149,4 +163,114 @@ p {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+/* === Glyph sections === */
+
+section.glyph-section {
+    width: 96.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14.375rem;
+    margin-top: 14.375rem;
+}
+
+.introduction + .glyph-section {
+    margin-top: 24.1875rem;
+}
+
+.bird-story {
+    width: 66%;
+}
+
+
+.bird-story__title {
+    font-weight: 700;
+    font-feature-settings: 'ss02' on;
+}
+
+.bird-story__author {
+    margin-bottom: 2.5rem;
+}
+
+.bird-story__text {
+    font-feature-settings: 'fwid' on;
+}
+
+.bird-story__text--italic {
+    font-style: italic;
+}
+
+.glyph-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.weight-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 49%;
+    font-size: var(--text-size);
+}
+
+.weight-labels .weight-regular { font-weight: 400; }
+
+.weight-labels .weight-medium {
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weight-labels .weight-medium--active { text-decoration: underline; }
+
+.weight-labels .weight-italic {
+    font-style: italic;
+    font-weight: 500;
+}
+
+.weight-labels .weight-bold { font-weight: 700; }
+
+.weight-labels .weight-bold--active { text-decoration: underline; }
+
+.glyph-grid {
+    display: grid;
+    width: 100%;
+}
+
+.glyph-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem;
+    text-align: center;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+}
+
+/* 13-col: full character set, 44px medium */
+.glyph-grid--13 { grid-template-columns: repeat(13, 1fr); }
+.glyph-grid--13 .glyph-cell {
+    font-size: 2.75rem;
+    font-weight: 500;
+}
+
+/* 9-col: simplified alphabet + digits, 72px bold ss02 */
+.glyph-grid--9 { grid-template-columns: repeat(9, 1fr); }
+.glyph-grid--9 .glyph-cell {
+    font-size: 4.5rem;
+    font-weight: 700;
+    font-feature-settings: 'ss02' on;
+}
+
+/* 6-col: large decorative A–Z, 216px bold ss01 */
+.glyph-grid--6 { grid-template-columns: repeat(6, 1fr); }
+.glyph-grid--6 .glyph-cell {
+    font-size: 13.5rem;
+    font-weight: 700;
+    font-feature-settings: 'ss01' on;
 }
