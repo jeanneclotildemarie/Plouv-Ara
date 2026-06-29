@@ -75,6 +75,27 @@ body {
     color: var(--text);
     font-family: "Plouv-ara", sans-serif;
     font-weight: var(--font-regular);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 60%;
+}
+
+button {
+    background: transparent;
+    border: none;
+    font-family: "Plouv-ara";
+    color: var(--text);
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+button:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 h1 {
@@ -83,4 +104,20 @@ h1 {
     text-align: center;
     font-feature-settings: 'ss01' on;
     line-height: normal;
+}
+
+p {
+    text-align: center;
+    font-size: 1.875rem;
+}
+
+.introduction {
+    font-feature-settings: 'ss01' on;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
