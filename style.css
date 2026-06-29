@@ -12,6 +12,7 @@
     --text: var(--blue);
     --font-regular: 400;
     --font-bold: 700;
+    --text-size: 1.875rem;
 }
 
 /* Regular — 400 */
@@ -80,6 +81,17 @@ body {
     align-items: center;
 }
 
+header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 4rem;
+}
+
+header h1 {
+    margin: 4rem;
+}
+
 section {
     width: 60%;
 }
@@ -89,7 +101,7 @@ button {
     border: none;
     font-family: "Plouv-ara";
     color: var(--text);
-    font-size: 1.875rem;
+    font-size: var(--text-size);
     font-weight: 700;
 }
 
@@ -99,8 +111,8 @@ button:hover {
 }
 
 h1 {
-    font-size: 13.5rem;
-    font-weight: var(--font-bold);
+    font-size: 24rem;
+    font-weight: 500;
     text-align: center;
     font-feature-settings: 'ss01' on;
     line-height: normal;
@@ -109,6 +121,22 @@ h1 {
 p {
     text-align: center;
     font-size: 1.875rem;
+}
+
+.icon {
+  display: inline-block;
+  height: 4em;
+  width: 4em;
+  background-color: var(--text);
+  -webkit-mask: var(--icon) center / contain no-repeat;
+          mask: var(--icon) center / contain no-repeat;
+}
+
+.icon-heart  { 
+    --icon: url("/assets/svg/heart.svg"); 
+}
+.icon-star-5 {
+     --icon: url("/assets/svg/star-5.svg"); 
 }
 
 .introduction {
@@ -120,4 +148,5 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
