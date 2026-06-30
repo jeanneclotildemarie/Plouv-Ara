@@ -99,16 +99,18 @@ section {
     width: 60%;
 }
 
-button {
+a {
     background: transparent;
     border: none;
     font-family: "Plouv-ara";
     color: var(--text);
     font-size: var(--text-size);
     font-weight: 700;
+    font-feature-settings: 'ss01' off;
+    text-decoration: none;
 }
 
-button:hover {
+a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
