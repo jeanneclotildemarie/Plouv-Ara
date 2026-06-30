@@ -213,11 +213,14 @@ section.glyph-section {
 .weight-labels {
     display: flex;
     justify-content: space-between;
-    width: 49%;
+    width: 60%;
     font-size: var(--text-size);
 }
 
+.weight-labels span { cursor: pointer; }
+
 .weight-labels .weight-regular { font-weight: 400; }
+.weight-labels .weight-regular--active { text-decoration: underline; }
 
 .weight-labels .weight-medium {
     font-weight: 500;
@@ -225,17 +228,19 @@ section.glyph-section {
     flex-direction: column;
     align-items: center;
 }
+.weight-labels .weight-medium--active .weight-medium__label { text-decoration: underline; }
 
-.weight-labels .weight-medium--active { text-decoration: underline; }
-
-.weight-labels .weight-italic {
-    font-style: italic;
-    font-weight: 500;
-}
 
 .weight-labels .weight-bold { font-weight: 700; }
-
 .weight-labels .weight-bold--active { text-decoration: underline; }
+
+.weight-labels .weight-italic { font-style: italic; }
+.weight-labels .weight-italic--active { text-decoration: underline; }
+
+.glyph-table[data-weight="regular"] .glyph-cell { font-weight: 400; }
+.glyph-table[data-weight="medium"] .glyph-cell  { font-weight: 500; }
+.glyph-table[data-weight="bold"] .glyph-cell    { font-weight: 700; }
+.glyph-table[data-italic="true"] .glyph-cell    { font-style: italic; }
 
 .glyph-grid {
     display: grid;
@@ -252,25 +257,22 @@ section.glyph-section {
     text-box-edge: cap alphabetic;
 }
 
-/* 13-col: full character set, 44px medium */
+/* 13-col: full character set, 44px */
 .glyph-grid--13 { grid-template-columns: repeat(13, 1fr); }
 .glyph-grid--13 .glyph-cell {
     font-size: 2.75rem;
-    font-weight: 500;
 }
 
-/* 9-col: simplified alphabet + digits, 72px bold ss02 */
+/* 9-col: simplified alphabet + digits, 72px ss02 */
 .glyph-grid--9 { grid-template-columns: repeat(9, 1fr); }
 .glyph-grid--9 .glyph-cell {
     font-size: 4.5rem;
-    font-weight: 700;
     font-feature-settings: 'ss02' on;
 }
 
-/* 6-col: large decorative A–Z, 216px bold ss01 */
+/* 6-col: large decorative A–Z, 216px ss01 */
 .glyph-grid--6 { grid-template-columns: repeat(6, 1fr); }
 .glyph-grid--6 .glyph-cell {
     font-size: 13.5rem;
-    font-weight: 700;
     font-feature-settings: 'ss01' on;
 }

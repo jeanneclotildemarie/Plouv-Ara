@@ -1,3 +1,39 @@
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.weight-labels').forEach(function (labels) {
+        const table = labels.closest('.glyph-table');
+
+        const weightMap = {
+            'weight-regular': { key: 'regular', activeClass: 'weight-regular--active' },
+            'weight-medium':  { key: 'medium',  activeClass: 'weight-medium--active' },
+            'weight-bold':    { key: 'bold',     activeClass: 'weight-bold--active' },
+        };
+        const weightSpans = labels.querySelectorAll('.weight-regular, .weight-medium, .weight-bold');
+        const italicSpan  = labels.querySelector('.weight-italic');
+
+        weightSpans.forEach(function (span) {
+            span.addEventListener('click', function () {
+                weightSpans.forEach(function (s) {
+                    Object.values(weightMap).forEach(function (v) { s.classList.remove(v.activeClass); });
+                });
+                const matched = Object.entries(weightMap).find(([cls]) => span.classList.contains(cls));
+                if (matched) {
+                    span.classList.add(matched[1].activeClass);
+                    table.dataset.weight = matched[1].key;
+                }
+            });
+        });
+
+        if (italicSpan) {
+            italicSpan.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const on = table.dataset.italic === 'true';
+                table.dataset.italic = on ? 'false' : 'true';
+                italicSpan.classList.toggle('weight-italic--active', !on);
+            });
+        }
+    });
+});
+
 const gradients = [
     ['--background-blue', '--background-orange', '--blue'],
     ['--background-yellow', '--background-blue', '--blue'],
