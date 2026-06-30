@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
+    fetch('/content/textes_enfants_plouvara.json')
+        .then(r => r.json())
+        .then(data => {
+            const stories = document.querySelectorAll('.bird-story');
+            const pool = [...data.texts];
+            for (let i = pool.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [pool[i], pool[j]] = [pool[j], pool[i]];
+            }
+            stories.forEach((story, i) => {
+                const entry = pool[i];
+                story.querySelector('.bird-story__title:not(.bird-story__author)').textContent = entry.title;
+                story.querySelector('.bird-story__author').textContent = entry.author;
+                story.querySelector('.bird-story__text').innerHTML = entry.content.replace(/\n/g, '<br>');
+            });
+        });
+
     document.querySelectorAll('.weight-labels').forEach(function (labels) {
         const table = labels.closest('.glyph-table');
 
