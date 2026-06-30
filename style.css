@@ -108,6 +108,7 @@ a {
     font-weight: 700;
     font-feature-settings: 'ss01' off;
     text-decoration: none;
+    text-align: center;
 }
 
 a:hover {
