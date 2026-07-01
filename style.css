@@ -4,11 +4,15 @@
     --background-yellow: #FFFFA5;
     --background-lavender: #FFD9FC;
     --background-red: #FFD5D6;
+    --svg-yellow: var(--background-yellow);
+    --svg-white: #FFF;
+    --svg-pink: #FFD5D6;
     --yellow: var(--background-yellow);
     --blue: #050060;
     --red: #7F0002;
     --purple: #4A0094;
     --text: var(--blue);
+    --svg-colour: var(--svg-yellow);
     --font-regular: 400;
     --font-bold: 700;
     --text-size: 1.875rem;

@@ -52,15 +52,16 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const gradients = [
-    ['--background-blue', '--background-orange', '--blue'],
-    ['--background-yellow', '--background-blue', '--blue'],
-    ['--background-lavender', '--background-orange', '--purple'],
-    ['--background-red', '--background-blue', '--red']
+    ['--background-blue', '--background-orange', '--blue', '--svg-yellow'],
+    ['--background-yellow', '--background-blue', '--blue', '--svg-pink'],
+    ['--background-lavender', '--background-orange', '--purple', '--svg-yellow'],
+    ['--background-red', '--background-blue', '--red', '--svg-pink']
 ];
 
 const randomIndex = Math.floor(Math.random() * gradients.length);
-const [topColor, bottomColor, textColor] = gradients[randomIndex];
+const [topColor, bottomColor, textColor, svgColour] = gradients[randomIndex];
 
 document.documentElement.style.setProperty('--gradient-top',    `var(${topColor})`);
 document.documentElement.style.setProperty('--gradient-bottom', `var(${bottomColor})`);
 document.documentElement.style.setProperty('--text', `var(${textColor})`);
+document.documentElement.style.setProperty('--svg-colour', `var(${textColor})`);
