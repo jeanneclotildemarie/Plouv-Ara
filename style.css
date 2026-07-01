@@ -234,8 +234,8 @@ footer {
     height: 2rem;
     margin: 0 1.5rem 1.5rem;
     background-color: var(--text);
-    -webkit-mask: url('/assets/svg/flower-small.svg') repeat-x left center / auto 100%;
-    mask: url('/assets/svg/flower-small.svg') repeat-x left center / auto 100%;
+    -webkit-mask: url('/assets/svg/flower-small.svg') round center / auto 100%;
+    mask: url('/assets/svg/flower-small.svg') round center / auto 100%;
 }
 
 /* === Glyph sections === */
@@ -350,4 +350,122 @@ section.glyph-section {
 .glyph-grid--6 .glyph-cell {
     font-size: 13.5rem;
     font-feature-settings: 'ss01' on;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 22vw;
+    }
+
+    section {
+        width: 92%;
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+    }
+
+    a {
+        font-size: 1.125rem;
+    }
+
+    .icon {
+        height: 2.5em;
+        width: 2.5em;
+    }
+
+    header {
+        padding-bottom: 5rem;
+    }
+
+    .introduction {
+        gap: 2rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    section.glyph-section {
+        gap: 5rem;
+        margin-top: 5rem;
+    }
+
+    .introduction + .glyph-section {
+        margin-top: 8rem;
+    }
+
+    .bird-story {
+        width: 100%;
+    }
+
+    .weight-labels {
+        width: 90%;
+        font-size: 1.125rem;
+    }
+
+    .glyph-table {
+        gap: 2rem;
+    }
+
+    .glyph-grid--13 {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+    .glyph-grid--13 .glyph-cell {
+        font-size: 1.5rem;
+    }
+
+    .glyph-grid--9 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .glyph-grid--9 .glyph-cell {
+        font-size: 2rem;
+    }
+
+    .glyph-grid--6 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .glyph-grid--6 .glyph-cell {
+        font-size: 3.5rem;
+    }
+
+    footer {
+        margin-top: 5rem;
+    }
+
+    .footer-credits {
+        padding: 2rem 0;
+        gap: 2.5rem;
+    }
+
+    .credits-columns {
+        flex-direction: column;
+        width: 100%;
+        gap: 2.5rem;
+    }
+
+    .credits-thanks {
+        width: 100%;
+    }
+
+    /* Center Y and Z in the last row of the 4-col large glyph grid */
+    .glyph-grid--6 .glyph-cell:nth-child(25),
+    .glyph-grid--6 .glyph-cell:nth-child(26),
+    .glyph-grid--6 .glyph-cell:nth-child(29),
+    .glyph-grid--6 .glyph-cell:nth-child(30) {
+        display: none;
+    }
+    .glyph-grid--6 .glyph-cell:nth-child(27) {
+        grid-column: 2;
+    }
+    .glyph-grid--6 .glyph-cell:nth-child(28) {
+        grid-column: 3;
+    }
 }
