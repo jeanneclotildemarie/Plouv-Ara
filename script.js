@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 story.querySelector('.bird-story__author').textContent = entry.author;
                 story.querySelector('.bird-story__text').innerHTML = entry.content.replace(/\n/g, '<br>');
             });
+            if (typeof window.scatterDecor === 'function') window.scatterDecor();
         });
 
     document.querySelectorAll('.weight-labels').forEach(function (labels) {
