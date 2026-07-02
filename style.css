@@ -526,3 +526,17 @@ section.glyph-section {
     transform: scaleX(-1) scale(25);
     box-sizing: border-box;
 }
+
+/* === Decorative constellations === */
+
+#decor-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.decor-shape {
+    position: absolute;
+}
