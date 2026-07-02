@@ -84,18 +84,39 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    overflow-x: hidden;
 }
 
 header {
     width: 100%;
     margin: 0;
     padding: 0;
-    padding-bottom: 12.8125rem;
+}
+
+.header-bird {
+    display: block;
+}
+
+.header-bird--left {
+    justify-self: start;
+    margin-left: 2.5rem;
+    width: 11rem;
+    height: 13.2rem; /* robin.svg 210:251 */
+}
+
+.header-bird--right {
+    justify-self: end;
+    margin-right: 2.5rem;
+    width: 20rem;
+    height: 13.3rem; /* eagle.svg 540:358 */
+    transform: scaleX(-1);
 }
 
 header h1 {
     margin: 0;
     margin-top: 0.3em;
+    line-height: 1.3em;
 }
 
 section {
@@ -120,7 +141,7 @@ a:hover {
 }
 
 h1 {
-    font-size: 22rem;
+    font-size: 21rem;
     font-weight: 500;
     text-align: center;
     font-feature-settings: 'ss01' on;
@@ -145,14 +166,53 @@ p {
           mask: var(--icon) center / contain no-repeat;
 }
 
-.icon-heart  { 
-    --icon: url("/assets/svg/heart.svg"); 
+.icon-heart  {
+    --icon: url("/assets/svg/heart.svg");
 }
 .icon-star-5 {
-     --icon: url("/assets/svg/star-5.svg"); 
+     --icon: url("/assets/svg/star-5.svg");
+}
+
+.svg-icon {
+  display: block;
+  background-color: var(--svg-colour);
+  -webkit-mask: var(--icon) center / contain no-repeat;
+          mask: var(--icon) center / contain no-repeat;
+}
+
+.svg-flower          { --icon: url("/assets/svg/flower.svg"); }
+.svg-flamingo        { --icon: url("/assets/svg/flamingo.svg"); }
+.svg-star-4          { --icon: url("/assets/svg/star-4.svg"); }
+.svg-circle          { --icon: url("/assets/svg/circle.svg"); }
+.svg-heart           { --icon: url("/assets/svg/heart.svg"); }
+.svg-star-5          { --icon: url("/assets/svg/star-5.svg"); }
+.svg-star-8          { --icon: url("/assets/svg/star-8-.svg"); }
+.svg-parrot          { --icon: url("/assets/svg/parrot.svg"); }
+.svg-seagull         { --icon: url("/assets/svg/seagull.svg"); }
+.svg-eagle           { --icon: url("/assets/svg/eagle.svg"); }
+.svg-twit            { --icon: url("/assets/svg/twit.svg"); }
+.svg-jay             { --icon: url("/assets/svg/jay.svg"); }
+.svg-magpie          { --icon: url("/assets/svg/magpie.svg"); }
+.svg-reversed-magpie { --icon: url("/assets/svg/reversed-magpie.svg"); }
+.svg-falcon          { --icon: url("/assets/svg/falcon.svg"); }
+.svg-goose           { --icon: url("/assets/svg/goose.svg"); }
+.svg-dove            { --icon: url("/assets/svg/dove.svg"); }
+.svg-robin           { --icon: url("/assets/svg/robin.svg"); }
+.svg-blackbird       { --icon: url("/assets/svg/blackbird.svg"); }
+.svg-ara             { --icon: url("/assets/svg/ara.svg"); }
+.svg-flower-small    { --icon: url("/assets/svg/flower-small.svg"); }
+
+.deco {
+    position: absolute;
+    pointer-events: none;
+}
+
+.svg-icon.deco--dark {
+    background-color: var(--text);
 }
 
 .introduction {
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
