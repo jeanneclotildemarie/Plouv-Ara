@@ -166,11 +166,11 @@ p {
           mask: var(--icon) center / contain no-repeat;
 }
 
-.icon-heart  {
+.icon-heart {
     --icon: url("/assets/svg/heart.svg");
 }
 .icon-star-5 {
-     --icon: url("/assets/svg/star-5.svg");
+    --icon: url("/assets/svg/star-5.svg");
 }
 
 .svg-icon {
@@ -291,7 +291,6 @@ footer {
     font-size: 1.125rem;
     line-height: 1.5rem;
 }
-
 
 .footer-flower {
     width: calc(100% - 3rem);
@@ -414,4 +413,14 @@ section.glyph-section {
 .glyph-grid--6 .glyph-cell {
     font-size: 13.5rem;
     font-feature-settings: 'ss01' on;
+}
+
+.seagull-container {
+    margin-top: 10rem;
+    height: 30rem;
+}
+
+.footer-seagull {
+    transform: scaleX(-1) scale(30);
+    box-sizing: border-box;
 }
