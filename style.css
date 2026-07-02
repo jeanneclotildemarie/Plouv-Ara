@@ -294,14 +294,17 @@ footer {
 .credits-column {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2.5rem;
     flex: 1;
+    min-width: 0;
 }
 
 .credits-group {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    max-width: 18rem;
 }
 
 .credits-role {
@@ -321,7 +324,7 @@ footer {
 .credits-thanks {
     width: 55%;
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     line-height: 1.5rem;
 }
 
@@ -447,7 +450,7 @@ section.glyph-section {
 .weight-labels {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 40%;
     font-size: var(--text-size);
 }
 
@@ -461,6 +464,7 @@ section.glyph-section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
 }
 .weight-labels .weight-medium--active .weight-medium__label { text-decoration: underline; }
 
