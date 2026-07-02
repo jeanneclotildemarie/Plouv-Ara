@@ -92,24 +92,25 @@ header {
     width: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 .header-bird {
-    display: block;
+    position: absolute;
 }
 
 .header-bird--left {
-    justify-self: start;
-    margin-left: 2.5rem;
-    width: 11rem;
-    height: 13.2rem; /* robin.svg 210:251 */
+    left: 13rem;
+    bottom: 7rem;
+    width: 14.5rem;
+    height: 17.4rem; /* robin.svg 210:251 */
 }
 
 .header-bird--right {
-    justify-self: end;
-    margin-right: 2.5rem;
-    width: 20rem;
-    height: 13.3rem; /* eagle.svg 540:358 */
+    right: 8rem;
+    bottom: -12.6rem;
+    width: 40rem;
+    height: 26.6rem; /* eagle.svg 540:358 */
     transform: scaleX(-1);
 }
 
@@ -166,11 +167,13 @@ p {
           mask: var(--icon) center / contain no-repeat;
 }
 
-.icon-heart  {
+.icon-heart {
     --icon: url("/assets/svg/heart.svg");
+    width: 3em;
+    height: 3em;
 }
 .icon-star-5 {
-     --icon: url("/assets/svg/star-5.svg");
+    --icon: url("/assets/svg/star-5.svg");
 }
 
 .svg-icon {
@@ -212,7 +215,7 @@ p {
 }
 
 .introduction {
-    margin-top: 10rem;
+    margin-top: 16rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -237,6 +240,36 @@ footer {
     align-items: center;
     margin-top: 14.375rem;
     gap: 1.5625rem;
+    position: relative;
+}
+
+.twit-container {
+    margin: 3rem 0;
+}
+
+.twit-container + .glyph-section {
+    margin-top: 0;
+}
+
+.twit-icon {
+    width: 10rem;
+    height: 10rem;
+}
+
+.footer-plant {
+    position: absolute;
+    left: 3rem;
+    bottom: 5rem;
+    width: 5rem;
+    height: 18.75rem;
+}
+
+.footer-goose {
+    position: absolute;
+    right: 2rem;
+    bottom: 5rem;
+    width: 8rem;
+    height: 9.375rem;
 }
 
 .footer-credits {
@@ -292,7 +325,6 @@ footer {
     line-height: 1.5rem;
 }
 
-
 .footer-flower {
     width: calc(100% - 3rem);
     height: 2rem;
@@ -311,6 +343,69 @@ section.glyph-section {
     align-items: center;
     gap: 14.375rem;
     margin-top: 14.375rem;
+}
+
+.glyph-section:nth-of-type(2) .bird-story {
+    position: relative;
+}
+
+.glyph-falcon {
+    position: absolute;
+    bottom: -13.7rem;
+    left: -12rem;
+    width: 12rem;
+    height: 9.5rem;
+}
+
+.glyph-section:nth-of-type(3) {
+    position: relative;
+}
+
+.glyph-section:nth-of-type(3) .bird-story {
+    position: relative;
+}
+
+.glyph-dove {
+    position: absolute;
+    bottom: -9rem;
+    left: -9rem;
+    width: 5.5rem;
+    height: 16rem;
+    transform: scaleX(-1);
+}
+
+.glyph-ara {
+    position: absolute;
+    top: -9rem;
+    right: calc(8.5% + 4.75rem);
+    width: 14.5rem;
+    height: 11.75rem;
+}
+
+.glyph-section:last-of-type {
+    position: relative;
+}
+
+.glyph-magpie {
+    position: absolute;
+    top: -6.5rem;
+    left: 11rem;
+    width: 10.5rem;
+    height: 8.1rem;
+    transform: scaleX(-1);
+}
+
+.glyph-section:last-of-type .glyph-table {
+    position: relative;
+}
+
+.glyph-flamingo {
+    position: absolute;
+    top: -12rem;
+    right: 4rem;
+    width: 14.5rem;
+    height: 16rem;
+    transform: scaleX(-1);
 }
 
 .introduction + .glyph-section {
@@ -414,4 +509,16 @@ section.glyph-section {
 .glyph-grid--6 .glyph-cell {
     font-size: 13.5rem;
     font-feature-settings: 'ss01' on;
+}
+
+.seagull-container {
+    margin-top: 10rem;
+    height: 24rem;
+}
+
+.footer-seagull {
+    width: 4em;
+    height: 4em;
+    transform: scaleX(-1) scale(25);
+    box-sizing: border-box;
 }
