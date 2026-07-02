@@ -310,22 +310,22 @@ footer {
 .credits-role {
     margin-bottom: 10px;
     font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.875rem;
+    line-height: 2.125rem;
     font-feature-settings: 'ss01' on;
 }
 
 .credits-names {
     font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.875rem;
+    line-height: 2.125rem;
 }
 
 .credits-thanks {
     width: 55%;
     font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.875rem;
+    line-height: 2.125rem;
 }
 
 .footer-flower {
